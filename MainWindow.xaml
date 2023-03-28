@@ -1,0 +1,43 @@
+﻿<Window x:Name="theWindow" x:Class="LAVTechWindow.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:LAVTechWindow"
+        xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSHarp.Wpf"
+		mc:Ignorable="d"
+		Title="LAVtechBrowser" Height="450" Width="800"
+		 PreviewMouseDown="drag" PreviewMouseUp="drop" MouseEnter="enter" MouseLeave="desert"
+		PreviewKeyDown="OnKeyDownHandler" PreviewKeyUp="OnKeyUpHandler" Background="#FF424242" BorderThickness="1,1,1,1" ResizeMode="NoResize" Opacity="0.5" WindowStyle="None" AllowsTransparency="True" BorderBrush="#FF00FFD1"
+		 >
+
+    <Grid x:Name="grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="647*"/>
+
+        </Grid.ColumnDefinitions>
+        <cefSharp:ChromiumWebBrowser x:Name="theBrowser"></cefSharp:ChromiumWebBrowser>
+
+        <Button x:Name="theMainButton" Content="&lt;SupportTheDev/&gt;" HorizontalAlignment="Right" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" Width="116" Margin="0,0,100,12" Click="theMainButton_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF6F6F6F" Offset="0.013"/>
+                    <GradientStop Color="#FF2B2B2B" Offset="1"/>
+                    <GradientStop Color="#FF9E9E9E" Offset="0.533"/>
+                    <GradientStop Color="White" Offset="0.253"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Image x:Name="alexaimg" Height="100"  Width="100" Source="/AlexandraWeb.png" Stretch="UniformToFill" RenderTransformOrigin="1,1" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+        <Slider x:Name="theOpacitySlider"  HorizontalAlignment="Right" Margin="0,0,-38,162" VerticalAlignment="Bottom" Width="120" RenderTransformOrigin="0.5,0.5" ValueChanged="theOpacitySlider_ValueChanged" Maximum="1" LargeChange="0.1" SmallChange="0.01" TickFrequency="0.1">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+    </Grid>
+</Window>
