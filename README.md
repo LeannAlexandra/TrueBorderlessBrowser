@@ -31,12 +31,10 @@
     <h2>Planning</h2>
     <h3>TODO:</h3>
     <ul>
-        <li>holding ctrl makes interaction possible, leaving ctrl makes the window clicktrhough but overlay. (** this
-            will go on the first experimental branch.)</li>
         <li>Make WebPluggins that forces certain elements to downsize that this browser can be used on smaller screens
             to maximise important information and downsize unimportant things. (I think about making it natively
             advertising and popup blocked)
         </li>
-        <li></li>
+        <li>Find a way to support propriatary video playback in cefSharp - or migrate to a different browser (heaven forbid webview2)</li>
     </ul>
 </div>
